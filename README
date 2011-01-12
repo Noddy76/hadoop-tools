@@ -1,0 +1,25 @@
+A collection of useful Hadoop tools.
+
+To use the tools build and use the file target/hadoop-tools-*-job.jar.
+
+$ hadoop jar target/hadoop-tools-0.0.1-SNAPSHOT-job.jar [-command] [options]
+
+Current commands are
+
+-blockFinder
+
+This tool will find the blocks that make up the file(s) specified and report
+their names and locations. I found this useful once to identify the host that
+was generating some files in HDFS. Using the information from this tool and
+searching the logs of one of the nodes reported I was able to find the address
+of the machine generating the file.
+
+
+-fixReplication
+
+This tool is not yet complete and will do nothing useful. Currently it should
+report any files that are open and any that have blocks that violate the block
+placement policy.
+
+
+If you have any questions (or patches) contact jamesg@last.fm
