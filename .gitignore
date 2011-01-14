@@ -1,0 +1,7 @@
+# Exclude target directory
+target
+
+# Exclude eclipse files
+.classpath
+.project
+.settings
